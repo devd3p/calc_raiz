@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div id="mensagem">
+        <h1> Digite um número e eu mostrarei a raiz: </h1>
+    </div>
+
+    <div id="formulario">
+        <form action="/"  method = "POST">
+            <input type="text" name="numero" placeholder="Digite o número: ">
+            <input type="submit" value="Calcular">
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+      var messages = {{messages | safe }};
+      for (var i=0; i<messages.length; i++) {
+        alert(messages[i]);
+      }
+        </script>
+    {% endif %}
+    {% endwith %}
+
+
+</body>
+</html>

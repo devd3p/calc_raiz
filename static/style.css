@@ -1,0 +1,34 @@
+body {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#mensagem {
+    margin-top: 50px;
+    margin-inline: auto;
+}
+
+#formulario {
+    margin-inline: auto;
+    background-color: bisque;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+
+    width:  25%;
+    border: 1px solid;
+    height: 200px;
+    padding: 20px;
+}
+
+#formulario form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#formulario input {
+    margin-top: 20px;
+}
